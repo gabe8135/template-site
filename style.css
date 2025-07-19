@@ -35,6 +35,18 @@ body {
     overflow-x: hidden;
 }
 
+/* Garante que padding e border não ultrapassem a largura */
+* {
+  box-sizing: border-box;
+}
+
+/* Evita rolagem horizontal global */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 nav,
 ul,
 li,
@@ -467,3 +479,154 @@ footer p {
     box-shadow: #0A192F;
 }
 
+/* Responsividade geral */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    width: 100vw;
+    padding: 10px 2vw;
+    margin: 1rem 0 0 0;
+  }
+  .botton {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1em;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  nav ul li {
+    margin: 0.5em 0;
+  }
+  .framer h1, .framer2 h2 {
+    font-size: 2rem;
+  }
+  .framer, .framer2 {
+    padding: 0.5em;
+  }
+  .div3 {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .description3, .video3 {
+    width: 100vw;
+    height: auto;
+    text-align: center;
+  }
+  .images4 {
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+  }
+  .images4 img {
+    width: 80vw;
+    height: auto;
+    margin-bottom: 1em;
+  }
+  .grafico {
+    width: 100vw;
+    height: 15rem;
+  }
+  .borda-interna img {
+    height: 15rem;
+  }
+  .video iframe, .video3 iframe {
+    width: 90vw;
+    height: 200px;
+  }
+}
+
+/* Menu sanduíche */
+@media (max-width: 700px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #000000ee;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    z-index: 10;
+    padding: 1em 0;
+  }
+  nav ul.open {
+    display: flex;
+  }
+  .menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+  }
+  .menu-hamburguer span {
+    height: 4px;
+    width: 30px;
+    background: #ae00ff;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  /* Ajuste para a grade e blocos em mobile */
+.grade {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1rem;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+.bloco1, .bloco2, .bloco3, .bloco4 {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px #0001;
+  flex: 1 1 180px;
+  min-width: 140px;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 700px) {
+  .grade {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  .bloco1, .bloco2, .bloco3, .bloco4 {
+    min-width: unset;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0.5rem;
+  }
+  .vertical, .horizontal {
+    display: none;
+  }
+  .framer, .framer2, .div3, .div4, .images4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  h1, h2, p {
+    word-break: break-word;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* Evita que imagens ultrapassem a tela */
+img, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

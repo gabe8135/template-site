@@ -59,4 +59,9 @@ window.addEventListener('scroll', function() {
     container.style.transform = 'perspective(600px) rotateX(' + (rotation > 0 ? rotation : 0) + 'deg)';
 });
 
+function toggleMenu() {
+  const menu = document.querySelector('nav ul');
+  menu.classList.toggle('open');
+}
+
 
