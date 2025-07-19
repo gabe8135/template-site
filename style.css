@@ -1,0 +1,469 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*outline: 1px dotted rgb(255, 0, 0);*/
+}
+
+header {
+    width: 80vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: transparent;
+    color: white;
+    border-radius: 3em;
+    margin: 2rem 0 0 0;
+}
+
+header,
+.botton,
+.framer {
+    z-index: 2;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+nav,
+ul,
+li,
+a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0.5rem 0 0.5rem;
+    color: #ffffff86;
+}
+
+nav, ul, li, a:hover {
+    text-decoration: none;
+    color: #e4b2fc6b;
+}
+
+.botton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    width: 15em;
+    height: auto;
+}
+
+.login,
+.playground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 2.5em;
+    border-radius: 2em;
+    cursor: pointer;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.playground {
+    background-color: #ffffff15;
+
+}
+
+.login {
+    background-color: #ae00ff;
+}
+
+.framer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+    color: white;
+    margin: 2em 0 0 0;
+}
+
+.framer h1 {
+    font-size: 64px;
+}
+
+.framer p {
+    margin: 2rem 0 0 0;
+    font-size: 20px;
+
+}
+
+.topo p {
+    font-size: 16px;
+    display: flex;
+    width: 22rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.555);
+    border-radius: 2em;
+    margin: 2rem 0 2rem 0;
+}
+
+.mancha {
+    margin: -10em 0 0 0;
+    position: absolute;
+    width: 90rem;
+    height: 90rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: radial-gradient(#ae00ff8a 0%, #ff6f0000 70%);
+    z-index: 1;
+}
+
+.botton-get {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    width: 25em;
+    height: auto;
+    margin: 2em 0 0 0;
+}
+
+.get,
+.read {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    height: 2.5em;
+    border-radius: 2em;
+    cursor: pointer;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.read {
+    background-color: #ffffff15;
+    color: #fff;
+}
+
+.get {
+    background-color: #ae00ff;
+}
+
+.grafico {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0 0 0;
+    z-index: 2;
+    width: 95vw;
+    max-width: 1209px;
+    height: 27rem;
+    overflow: hidden;
+    background: linear-gradient(#ae00ff8a 0%, #ff6f0000 70%);
+    border-radius: 2em 2em 0 0;
+    transform: perspective(600px) rotateX(45deg);
+}
+
+.borda-interna {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 5px solid transparent;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+/*aqui começa css do caroussel*/
+
+/* Estilos do Carrossel de Marcas */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner-marcas {
+    display: flex;
+    animation: slide-marcas 30s linear infinite; /* Ajuste a velocidade aqui */
+    width: fit-content;
+}
+
+.carousel-item-marcas {
+    flex: 0 0 auto;
+    width: 25%; /* Ajuste a largura de cada item aqui */
+    padding: 0 15px; /* Espaçamento entre os itens */
+    box-sizing: border-box;
+}
+
+.marca-box {
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.marca-img {
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes slide-marcas {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Fim do Carrossel de Marcas */
+
+
+.borda-interna img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.video {
+    margin: 2rem 0 0 0;
+}
+
+.carousel {
+    width: 100vw;
+    height: 5vh;
+    margin: 2rem 0 2rem 0;
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel__img {
+    width: 5rem;
+    height: 1rem;
+    transition: transform 1.5s;
+}
+
+.framer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.framer2 h2 {
+    font-size: 64px;
+    margin: 2rem 0 2rem 0;
+}
+
+.meio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    margin: 2rem 0 2rem 0;
+    z-index: 2;
+}
+
+.grade {
+    width: 100vw;
+    max-width: 1220px;
+    height: auto;
+    margin: 2rem 0 2rem 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    grid-template-rows: 1fr 1px 1fr;
+}
+
+.bloco1, .bloco2, .bloco3, .bloco4 {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloco1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.bloco2 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.bloco3 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.bloco4 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.vertical {
+    grid-area: 1 / 2 / 4 / 3;
+    width: 1px;
+    height: 400px;
+    background: radial-gradient(#ae00ff8a 0%, #ff6f0000 90%);
+}
+
+.horizontal {
+    grid-area: 2 / 1 / 3 / 4;
+    width: 1200px;
+    height: 1px;
+    background: radial-gradient(#ae00ff8a 0%, #ff6f0000 70%);
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ae00ff;
+}
+
+.description {
+    color: #ffffff6b;
+}
+
+.bot-baixo p{
+    font-weight: bold;
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 2rem 0;
+    border-radius: 2rem;
+    background-color: #ae00ff42;
+}
+
+.div3{
+    max-width: 1220px;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    border: #ffffff5d 1px solid;
+    border-radius: 2rem;
+}
+
+.description3 {
+    width: 45vw;
+    height: 30rem;
+    text-align: left;
+}
+
+.description3 h2 {
+    font-size: 46px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.description3 p {
+    font-size: 20px;
+    color: #ffffff6b;
+}
+
+.bot-div3 p{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ae00ff42;
+    color: #fff;
+    margin: 2rem 0 0 0;
+}
+
+.video3 {
+    display: flex;
+    width: 45vw;
+    height: 30rem;
+    align-items: center;
+    justify-content: center;   
+}
+
+.video3 iframe {
+    border-radius: 2rem;
+}
+
+.div4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 15rem;
+    margin: 2rem 0 2rem 0;
+    background-color: rgb(31, 31, 31);
+}
+
+.images4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70vw;
+    height: 15rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.images4 img {
+    width: 10rem;
+    height: 2.5rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ae00ff42;
+    border-radius: 2rem 2rem 0 0;
+    width: 100vw;
+    height: 6rem;
+    margin: 2rem 0 0 0;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    border-radius: 2rem 2rem 0 0;
+    width: 100vw;
+    height: 6rem;
+    margin: 2rem 0 0 0;
+    
+}
+
+footer p {
+    margin: 0 40% 0 40%;
+    width: 20rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*oculta barra de rolagem*/
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0.2em;
+}
+
+.element::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: #0A192F;
+}
+
